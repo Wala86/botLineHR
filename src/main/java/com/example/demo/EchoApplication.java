@@ -27,12 +27,12 @@ public class EchoApplication {
     @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
        		System.out.println("event: " + event);
-		/*
-		 * if (event.getMessage().getText() == "Hi" ||
-		 * event.getMessage().getText().equals("Hi")) { return new
-		 * TextMessage("Hello, How are you?"); } else { return new
-		 * TextMessage(event.getMessage().getText()); }
-		 */
+		
+		  if (event.getMessage().getText() == "Hi" ||
+		  event.getMessage().getText().equals("Hi")) { return new
+		  TextMessage("Hello, How are you?"); } else { return new
+		  TextMessage(event.getMessage().getText()); }
+		 /*
 		AIConfiguration configuration = new AIConfiguration("f01696a0854347a1996bd9bc6155dacb");
 
 		AIDataService dataService = new AIDataService(configuration);
@@ -59,7 +59,7 @@ public class EchoApplication {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			return null;
-		}
+		}*/
     }
 
     @EventMapping
